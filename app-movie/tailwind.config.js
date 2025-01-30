@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        noto: ['"42dot Sans"']
+        schibsted: ['"Schibsted Grotesk"', 'san-serif'],
+        sans42dot: '42dot Sans',
+        roboto: 'Roboto Condensed'
       }
     },
   },
