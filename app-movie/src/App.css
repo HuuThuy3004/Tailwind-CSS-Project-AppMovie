@@ -1,13 +1,27 @@
 @tailwind base;
+@tailwind components;
+
 
 @layer base {
   body {
     @apply font-roboto;
   }
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl;
+  }
   h4 {
     @apply text-2xl;
   }
-  h3 {
-    @apply text-xl;
-  }
 };
+
+@layer components {
+  .btn {
+    @apply border-2 border-primary px-4 py-2 rounded font-semibold text-xl text-primary uppercase hover:bg-primary hover:text-white;
+  }
+
+  .title {
+  }
+}

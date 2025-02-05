@@ -1,4 +1,24 @@
 import { useState } from "react";
+import NavItem from "./NavItem";
+
+const items = [
+  {
+    label: 'Trang chủ',
+    icon: <i className='fa-solid fa-house text-[22px]'></i>,
+    active: true,
+  },
+  { label: 'Phim bộ', icon: <i className='fa-solid fa-chevron-down'></i> },
+  { label: 'Giới thiệu', icon: <i className='fa-solid fa-circle-info'></i> },
+  { label: 'Thể loại', icon: <i className='fa-solid fa-bars'></i> },
+];
+
+const NavItemContainer = () => (
+  <>
+    {items.map((item, index) => (
+      <NavItem item={item} key={index} />
+    ))}
+  </>
+);
 
 export default function Nav() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -11,13 +31,12 @@ export default function Nav() {
           PhimMoizz.net
         </h4>
       </div>
+
       <ul className="mx-4 my-2 text-right">
-        <li className="flex justify-end items-center gap-2 p-2 cursor-pointer bg-white text-black font-bold">
+        {/* <li className="flex justify-end items-center gap-2 p-2 cursor-pointer bg-white text-black font-bold">
           <h3>Trang chủ</h3>
           <i className="fa-solid fa-house text-[22px]"></i>
         </li>
-
-        {/* Phim bộ - Dropdown */}
         <li>
           <div
             className="flex justify-end items-center gap-2 cursor-pointer p-2"
@@ -115,7 +134,8 @@ export default function Nav() {
               </li>
             </ul>
           )}
-        </li>
+        </li> */}
+        <NavItemContainer />
       </ul>
     </nav>
   );
