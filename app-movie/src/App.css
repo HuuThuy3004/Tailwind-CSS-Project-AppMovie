@@ -7,7 +7,7 @@
     @apply font-roboto;
   }
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-3xl font-bold uppercase;
   }
   h3 {
     @apply text-2xl;
@@ -22,6 +22,11 @@
     @apply border-2 border-primary px-4 py-2 rounded font-semibold text-xl text-primary uppercase hover:bg-primary hover:text-white;
   }
 
-  .title {
+  .card {
+    @apply bg-neutral-950 rounded-md shadow-md relative overflow-hidden cursor-pointer hover:shadow-lg hover:shadow-slate-950
+  }
+
+  .badge {
+    @apply flex justify-between items-center gap-2 bg-cyan-50 rounded-md absolute top-2 left-2 p-2 min-w-[25%]
   }
 }

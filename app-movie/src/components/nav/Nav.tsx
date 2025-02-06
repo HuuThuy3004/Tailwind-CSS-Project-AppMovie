@@ -21,18 +21,22 @@ const NavItemContainer = () => (
 );
 
 export default function Nav() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isShowList, setIsShowList] = useState(false);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isShowList, setIsShowList] = useState(false);
+  const [isNavMenuMobileOpen, setisNavMenuMobileOpen] = useState(false)
 
   return (
     <nav className="col-span-1 bg-black text-white">
-      <div className="mx-4">
+      <div className="flex items-center justify-between mx-4 md:block">
         <h4 className="font-bold text-right border-b py-4 uppercase">
           PhimMoizz.net
         </h4>
+        <i className="fa-solid fa-list text-2xl cursor-pointer md:hidden"
+          onClick={() => setisNavMenuMobileOpen(!isNavMenuMobileOpen)}
+        ></i>
       </div>
 
-      <ul className="mx-4 my-2 text-right">
+      <ul className={`mx-4 my-2 ${isNavMenuMobileOpen ? '' : 'hidden'} md:block`}>
         {/* <li className="flex justify-end items-center gap-2 p-2 cursor-pointer bg-white text-black font-bold">
           <h3>Trang chủ</h3>
           <i className="fa-solid fa-house text-[22px]"></i>

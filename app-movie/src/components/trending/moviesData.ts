@@ -43,7 +43,7 @@ export const moviesData: Movie[] = [
     {
         src: LatMat48h,
         titles: 'Lật mặt 48h',
-        main: 'Câu chuyện của một hội thảo của nhà đầu tư',
+        main: 'Câu chuyện của một hội thảo của nhà đầu tư, một nhà ',
         runtime: '115 phút'
     },
     {

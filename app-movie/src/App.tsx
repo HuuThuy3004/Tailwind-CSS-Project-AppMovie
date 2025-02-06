@@ -5,10 +5,11 @@ import Nav from "./components/nav/Nav";
 import Trending from "./components/trending/Trending";
 
 function App() {
+  
   return (
-    <div className="grid grid-cols-5">
+    <div className="grid md:grid-cols-5">
       <Nav />
-      <main className="col-span-4 mx-9">
+      <main className="md:col-span-4 mx-9">
         <AuthButton />
         <Header />
         <Trending />
